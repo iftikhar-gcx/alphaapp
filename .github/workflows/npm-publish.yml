@@ -70,7 +70,7 @@ jobs:
           # Name of the artifact to download.
           # If unspecified, all artifacts for the run are downloaded.
           # Optional.
-          name: my_artifacts
+          # name:
 
           # Destination path. Supports basic tilde expansion.
           # Optional. Default is $GITHUB_WORKSPACE
