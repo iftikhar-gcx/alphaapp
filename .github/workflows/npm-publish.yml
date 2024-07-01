@@ -64,6 +64,12 @@ jobs:
       - name: Verift the file - Job2
         run: ls -l job2.txt
 
+      - name: Upload a Build Artifact
+        uses: actions/upload-artifact@v4.3.3
+        with:
+          name: my_artifact_02
+          path: job2.txt
+
       - name: Download a Build Artifact
         uses: actions/download-artifact@v4
         with:
