@@ -22,4 +22,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Verift the file - Job2
-        run: ls -l test*
+        run: ls -l
