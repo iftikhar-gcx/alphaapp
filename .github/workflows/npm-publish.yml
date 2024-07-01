@@ -14,12 +14,25 @@ jobs:
         run: echo "Job1 - First Step"
 
       - name: Create a file - Job1
-        run: touch test.txt
+        run: echo "Job 1 text content" > job1.txt
 
 
   job2:
     name: This is Job2
     runs-on: ubuntu-latest
     steps:
+      - name: Create a Fuke - Job2
+        run: echo "Job 2 text content" > job2.txt
+      
       - name: Verift the file - Job2
+        run: ls -l job2.txt
+      
+      
+
+  job3:
+    name: This is job3
+    runs-on: ubuntu-latest
+    needs: [job1, job2]
+    steps:
+      - name: Check the files are created
         run: ls -l
